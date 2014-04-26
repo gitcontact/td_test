@@ -34,8 +34,8 @@ class PollsTest(LiveServerTestCase):
         self.assertIn('Site administration', body.text)
 
         # She now sees a couple of hyperlink that says "Polls"
-        # polls_links = self.browser.find_elements_by_link_text('Polls')
-        # self.assertEquals(len(polls_links), 2)
+        polls_links = self.browser.find_elements_by_link_text('Polls')
+        self.assertEquals(len(polls_links), 2)
 
         # TODO: Gertrude uses the admin site to create a new Poll
         # self.fail('todo: finish tests')
